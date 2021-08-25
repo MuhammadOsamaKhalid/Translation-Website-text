@@ -226,5 +226,24 @@
 <button style="margin-left: 30px;" class="btn btn-primary"><a href="home.html" class="text-white">Home</a></button>
 
 
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+    // let file = "fetch_ifo.txt"
+
+    // // fetch(file)
+    // // .then(x => x.text())
+    // // .then(y => document.getElementById('demo').innerHTML=y);
+
+    gettext('fetch_info1.txt');
+    async function getText(file){
+        let myObject = await fetch(file);
+        let myText = await myObject.text();
+        document.getElementById('demo').innerHTML = myText;
+    }
+</script>
+
+
+
 </body>
 </html>
